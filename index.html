@@ -18,33 +18,79 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
     /* Hero Section */
-    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #4a90e2, #50e3c2); color: #fff; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
-    .hero button { padding: 15px 30px; font-size: 1rem; background: #fff; color: #4a90e2; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #4a90e2, #50e3c2);
+      color: #fff;
+    }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
+    .hero p { font-size: 1.3rem; margin-bottom: 30px; max-width: 700px; }
+    .hero button {
+      padding: 18px 35px;
+      font-size: 1.1rem;
+      background: #fff;
+      color: #4a90e2;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
     .hero button:hover { background: #e6e6e6; }
 
     /* Sections */
     section { padding: 60px 20px; }
-    section h2 { font-size: 2rem; margin-bottom: 20px; }
-    section p { font-size: 1.1rem; margin-bottom: 15px; }
+    section h2 { font-size: 2rem; margin-bottom: 20px; text-align: center; }
+    section p { font-size: 1.1rem; margin-bottom: 15px; text-align: center; }
 
     /* Features */
     .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-    .feature { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: 0.3s; }
+    .feature { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: 0.3s; text-align: center; }
     .feature:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 
     /* Call-to-action */
     .cta { text-align: center; margin: 60px 0; }
-    .cta button { padding: 18px 35px; font-size: 1.1rem; background: #4a90e2; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+    .cta button {
+      padding: 18px 35px;
+      font-size: 1.1rem;
+      background: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
     .cta button:hover { background: #357ABD; }
 
     /* Footer */
     footer { text-align: center; padding: 40px 20px; background: #333; color: #fff; }
-    footer a { color: #50e3c2; margin: 0 10px; }
+    footer a { color: #50e3c2; margin: 0 10px; display: inline-block; margin-top: 10px; }
 
     /* Responsive */
-    @media(max-width:768px){ .hero h1 { font-size: 2rem; } .hero p { font-size: 1rem; } }
+    @media(max-width:1024px){
+      .hero h1 { font-size: 2.4rem; }
+      .hero p { font-size: 1.2rem; }
+      .features { gap: 20px; }
+    }
+    @media(max-width:768px){
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .hero button { width: 100%; padding: 15px; font-size: 1rem; }
+      section h2 { font-size: 1.8rem; }
+      section p { font-size: 1rem; }
+      .features { grid-template-columns: 1fr; }
+      .cta button { width: 100%; }
+    }
+    @media(max-width:480px){
+      .hero h1 { font-size: 1.7rem; }
+      .hero p { font-size: 0.95rem; }
+      section h2 { font-size: 1.5rem; }
+      section p { font-size: 0.9rem; }
+    }
   </style>
 </head>
 <body>
@@ -54,7 +100,7 @@
     <h1>Gamepad Test – Online Gamepad, GPU, Mic & MIDI Tester</h1>
     <p>Instantly detect issues with your Gamepad, GPU, microphone, or MIDI controller without installing any software.</p>
     <button onclick="window.location.href='https://www.gamepadtest.tech/'">Start Testing Now</button>
-
+  </section>
 
   <div class="container">
 
@@ -131,13 +177,6 @@
       <a href="#">FAQ</a>
     </p>
   </footer>
-
-  <!-- JavaScript -->
-  <script>
-    function scrollToSection(id){
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
 
 </body>
 </html>
